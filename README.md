@@ -18,6 +18,7 @@
 
 
 ### Fuzz
+[SELECTFUZZ: Efficient Directed Fuzzing with Selective Path Exploration](https://peng-hui.github.io/data/paper/sp23_selectfuzz.pdf) <br>
 
 # Papers 
 
