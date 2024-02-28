@@ -27,8 +27,20 @@
 
 # Papers
 ### Hybrid Fuzzer
+- **Name**   <br>
+**摘要：**   <br>
+**关键词：**  <br>
+
+
+- **DRILLER** <br>
+**摘要：**交替使用AFL和ANGR，当AFL在一段特定时间无法产生新的interesting输入，则转换为ANGR进行测试。<br>
+**关键词：**Hybrid Fuzzer、Alternate<br>
+
+- **QSYM** <br>
+**摘要：**并行执行AFL和Concolic Testing，允许两个测试组件之间共享他们的输入队列 <br>
+**关键词：** Hybrid Fuzzer、Parallel<br>
 ...
-### Fuzz
+### Coverage guided fuzzing(CGF)
 - **REDQUEEN: Fuzzing with Input-to-State Correspondence**  <br>
   **摘要:** 基于覆盖率引导的模糊测试器AFL，仍存在两个常见问题：魔数Magic bytes和（嵌套）校验和Checksums。为了克服这些障碍，通常会使用计算昂贵的方法，如污点跟踪和符号执行。缺点是通常需要访问源代码，对环境（如库调用行为或底层操作系统）需要相当精确的描述建模，或是需要平台指令集的准确语义。论文提出了一种轻量级但非常有效的方法来替代污点跟踪和符号执行，并且能够轻松扩展到大型二进制应用程序和未知环境。
   在给定程序的执行过程中，输入的部分内容往往会直接（即几乎未经修改）进入程序状态。利用这种输入到状态的对应关系，以高效的方式克服常见的模糊测试障碍。 论文实现了名为 REDQUEEN，能够自动解决给定二进制可执行文件的神奇字节和（嵌套）校验和测试。<br>
@@ -37,4 +49,13 @@
 - **Coverage-based Greybox Fuzzing as Markov Chain**<br>
   **摘要:**<br>
   **关键词：**<br>
+  ...
+
+### Concolic Testing
+- **Name**<br>
+**摘要：**<br>
+**关键词：**<br>
+
+
+
   
