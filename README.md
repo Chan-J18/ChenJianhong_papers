@@ -33,11 +33,11 @@
 
 
 - **DRILLER** <br>
-**摘要：**交替使用AFL和ANGR，当AFL在一段特定时间无法产生新的interesting输入，则转换为ANGR进行测试。<br>
-**关键词：**Hybrid Fuzzer、Alternate<br>
+**摘要：** 交替使用AFL和ANGR，当AFL在一段特定时间无法产生新的interesting输入，则转换为ANGR进行测试。<br>
+**关键词：** Hybrid Fuzzer、Alternate<br>
 
 - **QSYM** <br>
-**摘要：**并行执行AFL和Concolic Testing，允许两个测试组件之间共享他们的输入队列 <br>
+**摘要：** 并行执行AFL和Concolic Testing，允许两个测试组件之间共享他们的输入队列 <br>
 **关键词：** Hybrid Fuzzer、Parallel<br>
 ...
 ### Coverage guided fuzzing(CGF)
