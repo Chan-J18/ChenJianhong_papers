@@ -2,7 +2,8 @@
 # List
 
 ### Hybrid Fuzzer
-<!-- 已阅读-->[Fuzzy-Sat：Fuzzing Symbolic Expressions](https://arxiv.org/pdf/2102.06580.pdf)<br> 
+<!-- 已阅读-->
+[Fuzzy-Sat：Fuzzing Symbolic Expressions](https://arxiv.org/pdf/2102.06580.pdf)<br> 
 [FUZZOLIC: mixing fuzzing and concolic execution](https://www.researchgate.net/publication/352346470_FUZZOLIC_mixing_fuzzing_and_concolic_execution)<br>
 [Grey-Box Concolic Testing on Binary Code](https://softsec.kaist.ac.kr/~sangkilc/papers/choi-icse2019.pdf)<br>
 [A Survey of Hybrid Fuzzing based on Symbolic Execution](https://dl.acm.org/doi/pdf/10.1145/3444370.3444570)<br>
