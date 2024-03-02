@@ -9,13 +9,22 @@
 <!-- 已阅读-->
 [Qsym : A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-yun.pdf)<br>
 
-[Grey-Box Concolic Testing on Binary Code](https://softsec.kaist.ac.kr/~sangkilc/papers/choi-icse2019.pdf)<br>
+[Driller: Augmenting Fuzzing Through Selective Symbolic Execution](https://sites.cs.ucsb.edu/~vigna/publications/2016_NDSS_Driller.pdf)<br>
+[Eclipser:Grey-box Concolic Testing on Binary Code](https://softsec.kaist.ac.kr/~sangkilc/papers/choi-icse2019.pdf)<br>
+[Evaluating and Improving Hybrid Fuzzing](https://shadowmydx.github.io/papers/icse23main-p966.pdf)<br>
 
 
 ### Coverage guided fuzzing（CGF）
 <!-- 已阅读-->
-[REDQUEEN: Fuzzing with Input-to-State Correspondence](https://wcventure.github.io/FuzzingPaper/Paper/NDSS19_REDQUEEN.pdf)
-
+[REDQUEEN: Fuzzing with Input-to-State Correspondence](https://wcventure.github.io/FuzzingPaper/Paper/NDSS19_REDQUEEN.pdf)<br>
+[VUzzer: Application-aware Evolutionary Fuzzing](https://download.vusec.net/papers/vuzzer_ndss17.pdf)<br>
+[OSS-Fuzz Google's continuous fuzzing service for open source software](https://www.usenix.org/sites/default/files/conference/protected-files/usenixsecurity17_slides_serebryany.pdf)<br>
+[SELECTFUZZ: Efficient Directed Fuzzing with Selective Path Exploration](https://www.cse.cuhk.edu.hk/~wei/papers/sp23_selectfuzz.pdf)<br>
+[Coverage-based Greybox Fuzzing as Markov Chain](https://mboehme.github.io/paper/TSE18.pdf)<br>
+[Laf-Intel:Circumventing Fuzzing Roadblocks with Compiler Transformations](https://lafintel.wordpress.com/2016/08/15/circumventing-fuzzing-roadblocks-with-compiler-transformations/)<br>
+[Angora: Efficient Fuzzing by Principled Search](https://www.semanticscholar.org/reader/cc5cc6557af031ee405875ee6a91663e1c129610)<br>
+[WEIZZ: Automatic Grey-Box Fuzzing for Structured Binary Formats](https://arxiv.org/pdf/1911.00621.pdf)<br>
+[SLF: Fuzzing without Valid Seed Inputs](https://youwei1988.github.io/papers/ICSE2019.pdf)<br>
 ### Symbolic Executor
 [EXE: Automatically Generating Inputs of Death]()<br>
 <!-- 已阅读-->
@@ -55,16 +64,6 @@
 - **QSYM** <br>
 **摘要：** 并行执行AFL和Concolic Testing，允许两个测试组件之间共享他们的输入队列 <br>
 **关键词：** Hybrid Fuzzer、Parallel<br>
-
-- **Grey-Box Concolic Testing on Binary Code**<br>
-**摘要：**<br>
-**关键词：**<br>
-**基本思想：** <br>
-
-
-- **DRILLER** <br>
-**摘要：** 交替使用AFL和ANGR，当AFL在一段特定时间无法产生新的interesting输入，则转换为ANGR进行测试。<br>
-**关键词：** Hybrid Fuzzer、Alternate<br>
 ...
 
 ***
@@ -77,36 +76,9 @@
   **摘要:** 基于覆盖率引导的模糊测试器AFL，仍存在两个常见问题：魔数Magic bytes和（嵌套）校验和Checksums。为了克服这些障碍，通常会使用计算昂贵的方法，如污点跟踪和符号执行。缺点是通常需要访问源代码，对环境（如库调用行为或底层操作系统）需要相当精确的描述建模，或是需要平台指令集的准确语义。论文提出了一种轻量级但非常有效的方法来替代污点跟踪和符号执行，并且能够轻松扩展到大型二进制应用程序和未知环境。
   在给定程序的执行过程中，输入的部分内容往往会直接（即几乎未经修改）进入程序状态。利用这种输入到状态的对应关系，以高效的方式克服常见的模糊测试障碍。 论文实现了名为 REDQUEEN，能够自动解决给定二进制可执行文件的神奇字节和（嵌套）校验和测试。<br>
   **关键词：** Checksums、Magic Bytes、a strong input-to-state correspondence、DTA、CGF   <br>
-
-- **Coverage-based Greybox Fuzzing as Markov Chain**<br>
-  **摘要:**<br>
-  **关键词：**<br>
-
-  - **LAF-INTEL**<br>
-**摘要：** 将多字节检查拆分为单字节比较，帮助模糊器在推理分支条件时跟踪中间进度  <br>
-**关键词：** 多字节拆分、CGF<br>
-
-- **VUZZER**<br>
-**摘要：** 将动态污点分析（DTA）集成到模糊器中，识别哪些字节会影响分支条件中的操作数，从而绕过对Magic Bytes的检查<br>
-**关键词：** Magic Bytes、CGF、DTA<br>
-
-- **ANGORA**<br>
-**摘要：** 通过执行多字节动态污点分析（DTA）和使用梯度下降来有效地改变污点输入字节<br>
-**关键词：** 多字节、DTA、Gradient Descent<br>
-  
-- **WEIZZ**<br>
-**摘要：** 通过每次翻转输入中的一个位bit，在每次位翻转后检查哪些比较操作数在程序执行过程中发生了变化，从而可能表明改变的位与受影响的分支条件之间存在依赖关系。<br>
-**关键词：** CGF、位与分支条件的依赖关系<br>  
-  
-  - **SLF**<br>
-**摘要：** 利用类似与WEIZZ的位翻转策略，为应用程序生成有效输入，即使最初没有有意义的种。借助输入依赖性分析，SLF可以识别输入中的字段，然后采用基于梯度的多目标搜索启发式来处理程序中相互依赖检查<br>
-**关键词：** CGF、位与分支条件的依赖关系<br>
-
-- **ECLIPSER**<br>
-**摘要：** <br>
-**关键词：** <br>
-**基本思想：** <br>
 ...
+
+
 ***
 ### Symbolic Executor
 - **Name**<br>
@@ -119,24 +91,12 @@
 **关键词：** Symbolic Executor、LLVM、SMT Solver<br>
 **基本思想：** 解释执行编译为LLVM bitcode的待测程序，并在解释执行的过程中，进行符号表达式生成，并且实现了环境的模拟，和一些查询优化，每一个符号化过程为一个state，有state相关的调度等。<br>
 
-- **EXE**<br>
-**摘要：**<br>
-**关键词：**<br>
-**基本思想：** <br>
-
 
 ....
 
 ***
 
 ### Concolic Testing
-- **Name**<br>
-**摘要：**<br>
-**关键词：**<br>
-**基本思想：** <br>
-
-
-
 - **Name**<br>
 **摘要：**<br>
 **关键词：**<br>
@@ -150,12 +110,5 @@
 **摘要：**<br>
 **关键词：**<br>
 **基本思想：** <br>
-
-- **Name**<br>
-**摘要：**<br>
-**关键词：**<br>
-
-- **Name**<br>
-**摘要：**<br>
-**关键词：**<br>
+...
   
