@@ -7,8 +7,6 @@
 <!-- 已阅读-->
 [FUZZOLIC: mixing fuzzing and concolic execution](https://www.researchgate.net/publication/352346470_FUZZOLIC_mixing_fuzzing_and_concolic_execution)<br>
 <!-- 已阅读-->
-[Qsym : A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-yun.pdf)<br>
-
 [Driller: Augmenting Fuzzing Through Selective Symbolic Execution](https://sites.cs.ucsb.edu/~vigna/publications/2016_NDSS_Driller.pdf)<br>
 [Eclipser:Grey-box Concolic Testing on Binary Code](https://softsec.kaist.ac.kr/~sangkilc/papers/choi-icse2019.pdf)<br>
 [Evaluating and Improving Hybrid Fuzzing](https://shadowmydx.github.io/papers/icse23main-p966.pdf)<br>
@@ -17,6 +15,8 @@
 ### Coverage guided fuzzing（CGF）
 <!-- 已阅读-->
 [REDQUEEN: Fuzzing with Input-to-State Correspondence](https://wcventure.github.io/FuzzingPaper/Paper/NDSS19_REDQUEEN.pdf)<br>
+[ParmeSan: Sanitizer-guided Greybox Fuzzing](https://www.usenix.org/system/files/sec20-osterlund.pdf)<br>
+[Magma: A Ground-Truth Fuzzing Benchmark](https://arxiv.org/pdf/2009.01120.pdf)<br>
 [VUzzer: Application-aware Evolutionary Fuzzing](https://download.vusec.net/papers/vuzzer_ndss17.pdf)<br>
 [OSS-Fuzz Google's continuous fuzzing service for open source software](https://www.usenix.org/sites/default/files/conference/protected-files/usenixsecurity17_slides_serebryany.pdf)<br>
 [SELECTFUZZ: Efficient Directed Fuzzing with Selective Path Exploration](https://www.cse.cuhk.edu.hk/~wei/papers/sp23_selectfuzz.pdf)<br>
@@ -29,13 +29,14 @@
 [EXE: Automatically Generating Inputs of Death]()<br>
 <!-- 已阅读-->
 [KLEE: Unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs](https://www.usenix.org/legacy/event/osdi08/tech/full_papers/cadar/cadar.pdf)<br>
-
-### Concolic Testing
 <!-- 已阅读-->
 [Symbolic execution with SYMCC: Don’t interpret, compile!](https://www.usenix.org/system/files/sec20-poeplau.pdf)<br>
 <!-- 已阅读-->
-[SymQEMU: Compilation-based symbolic execution for binaries](https://www.s3.eurecom.fr/docs/ndss21_symqemu.pdf)<br>
+[Qsym : A Practical Concolic Execution Engine Tailored for Hybrid Fuzzing](https://www.usenix.org/system/files/conference/usenixsecurity18/sec18-yun.pdf)<br>
 
+[SymQEMU: Compilation-based symbolic execution for binaries](https://www.s3.eurecom.fr/docs/ndss21_symqemu.pdf)<br>
+[SymSan: Time and Space Efficient Concolic Execution via Dynamic Data-flow Analysis](https://www.usenix.org/system/files/sec22-chen-ju.pdf)<br>
+[Concolic Testing for Deep Neural Networks](https://www.kroening.com/papers/ase2018.pdf)<br>
 
 ### Rust Testing
 [RULF: Rust Library Fuzzing via API Dependency Graph Traversal](https://arxiv.org/pdf/2104.12064.pdf) <br>
@@ -61,9 +62,10 @@
 **关键词：**  Concolic execution、Fuzzing testing、SMT Solver、Hybrid fuzzing<br>
 **基本思想：** 提出了一种新颖的 concolic 框架，称为 Fuzzolic，它构建在二进制翻译器 QEMU 之上。用上面的Fuzzy-Sat求解得到的符号表达式。<br>
 
-- **QSYM** <br>
-**摘要：** 并行执行AFL和Concolic Testing，允许两个测试组件之间共享他们的输入队列 <br>
-**关键词：** Hybrid Fuzzer、Parallel<br>
+
+- **Driller: Augmenting Fuzzing Through Selective Symbolic Execution**   <br>
+**摘要：**   利用fuzzing和concolic互补的方式，以发现更深层次的错误。<br>
+**关键词：**  Hybrid fuzzing、Concolic execution、Fuzzing testing<br>
 ...
 
 ***
@@ -91,17 +93,14 @@
 **关键词：** Symbolic Executor、LLVM、SMT Solver<br>
 **基本思想：** 解释执行编译为LLVM bitcode的待测程序，并在解释执行的过程中，进行符号表达式生成，并且实现了环境的模拟，和一些查询优化，每一个符号化过程为一个state，有state相关的调度等。<br>
 
+- **SYMCC**<br>
+**摘要：** SYMCC，一个基于LLVM的C和C++编译器，用于将concolic执行下放到二进制文件中。<br>
+**关键词：** Symbolic Executor、Concolic Executor、LLVM<br>
+**基本思想：** 基于编译实现符号执行功能的插桩，并在实际机器码执行中才进行实际的符号执行<br>
 
-....
-
-***
-
-### Concolic Testing
-- **Name**<br>
-**摘要：**<br>
-**关键词：**<br>
-**基本思想：** <br>
-
+- **QSYM** <br>
+**摘要：** 并行执行AFL和Concolic Testing，允许两个测试组件之间共享他们的输入队列 <br>
+**关键词：** Hybrid Fuzzer、Parallel<br>
 ...
 
 ***
