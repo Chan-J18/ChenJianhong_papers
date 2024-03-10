@@ -15,6 +15,10 @@
 ### Coverage guided fuzzing（CGF）
 <!-- 已阅读-->
 [REDQUEEN: Fuzzing with Input-to-State Correspondence](https://wcventure.github.io/FuzzingPaper/Paper/NDSS19_REDQUEEN.pdf)<br>
+[Laf-Intel:Circumventing Fuzzing Roadblocks with Compiler Transformations](https://lafintel.wordpress.com/)<br>
+[CollAFL: Path Sensitive Fuzzing](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8418631)<br>
+[INSTRIM: Lightweight Instrumentation for Coverage-guided Fuzzing](https://wcventure.github.io/FuzzingPaper/Paper/NDSS18_INSTRIM.pdf)<br>
+[Designing New Operating Primitives to Improve Fuzzing Performance](https://cosmoss-jigu.github.io/pages/pubs/fuzzing-xu-ccs17.pdf)<br>
 [ParmeSan: Sanitizer-guided Greybox Fuzzing](https://www.usenix.org/system/files/sec20-osterlund.pdf)<br>
 [Magma: A Ground-Truth Fuzzing Benchmark](https://arxiv.org/pdf/2009.01120.pdf)<br>
 [VUzzer: Application-aware Evolutionary Fuzzing](https://download.vusec.net/papers/vuzzer_ndss17.pdf)<br>
@@ -78,6 +82,9 @@
   **摘要:** 基于覆盖率引导的模糊测试器AFL，仍存在两个常见问题：魔数Magic bytes和（嵌套）校验和Checksums。为了克服这些障碍，通常会使用计算昂贵的方法，如污点跟踪和符号执行。缺点是通常需要访问源代码，对环境（如库调用行为或底层操作系统）需要相当精确的描述建模，或是需要平台指令集的准确语义。论文提出了一种轻量级但非常有效的方法来替代污点跟踪和符号执行，并且能够轻松扩展到大型二进制应用程序和未知环境。
   在给定程序的执行过程中，输入的部分内容往往会直接（即几乎未经修改）进入程序状态。利用这种输入到状态的对应关系，以高效的方式克服常见的模糊测试障碍。 论文实现了名为 REDQUEEN，能够自动解决给定二进制可执行文件的神奇字节和（嵌套）校验和测试。<br>
   **关键词：** Checksums、Magic Bytes、a strong input-to-state correspondence、DTA、CGF   <br>
+
+
+
 ...
 
 
