@@ -1,6 +1,15 @@
 
 # List
 
+### Fuzzing with AI
+[Fuzz4All: Universal Fuzzing with Large Language Models](https://arxiv.org/abs/2308.04748)<br>
+[Large Language Models are Few-shot Testers: Exploring LLM-based General Bug Reproduction](https://arxiv.org/abs/2209.11515)<br>
+[Large Language Model guided Protocol Fuzzing](https://mengrj.github.io/files/chatafl.pdf)<br>
+### Fuzzing for AI
+
+### Fuzzing And AI
+[Large Language Models are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models](https://export.arxiv.org/abs/2212.14834)<br>
+[Learning and Repair of Deep Reinforcement Learning Policies from Fuzz-Testing Data](https://dl.acm.org/doi/pdf/10.1145/3597503.3623311)<br>
 ### Hybrid Fuzzer
 <!-- 已阅读-->
 [Fuzzy-Sat：Fuzzing Symbolic Expressions](https://arxiv.org/pdf/2102.06580.pdf)<br> 
@@ -15,6 +24,7 @@
 ### Coverage guided fuzzing（CGF）
 <!-- 已阅读-->
 [REDQUEEN: Fuzzing with Input-to-State Correspondence](https://wcventure.github.io/FuzzingPaper/Paper/NDSS19_REDQUEEN.pdf)<br>
+[Fuzztruction: Using Fault Injection-based Fuzzing to Leverage Implicit Domain Knowledge](https://www.usenix.org/system/files/sec23summer_10-bars-prepub.pdf)<br>
 [Laf-Intel:Circumventing Fuzzing Roadblocks with Compiler Transformations](https://lafintel.wordpress.com/)<br>
 [CollAFL: Path Sensitive Fuzzing](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8418631)<br>
 [INSTRIM: Lightweight Instrumentation for Coverage-guided Fuzzing](https://wcventure.github.io/FuzzingPaper/Paper/NDSS18_INSTRIM.pdf)<br>
