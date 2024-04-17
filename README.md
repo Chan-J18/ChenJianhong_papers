@@ -1,19 +1,15 @@
 
 # List
 
-### Fuzzing with AI
-[Fuzz4All: Universal Fuzzing with Large Language Models](https://arxiv.org/abs/2308.04748)<br>
-[Large Language Models are Few-shot Testers: Exploring LLM-based General Bug Reproduction](https://arxiv.org/abs/2209.11515)<br>
-[Large Language Model guided Protocol Fuzzing](https://mengrj.github.io/files/chatafl.pdf)<br>
-
-### Fuzzing for AI
-[InCoder]()<br>
-
-
 ### Fuzzing And AI
 [Large Language Models are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models](https://export.arxiv.org/abs/2212.14834)<br>
 [Learning and Repair of Deep Reinforcement Learning Policies from Fuzz-Testing Data](https://dl.acm.org/doi/pdf/10.1145/3597503.3623311)<br>
 [Titan]()<br>
+[Fuzz4All: Universal Fuzzing with Large Language Models](https://arxiv.org/abs/2308.04748)<br>
+[Large Language Models are Few-shot Testers: Exploring LLM-based General Bug Reproduction](https://arxiv.org/abs/2209.11515)<br>
+[Large Language Model guided Protocol Fuzzing](https://mengrj.github.io/files/chatafl.pdf)<br>
+[InCoder]()<br>
+
 ### Hybrid Fuzzer
 <!-- 已阅读-->
 [Fuzzy-Sat：Fuzzing Symbolic Expressions](https://arxiv.org/pdf/2102.06580.pdf)<br> 
